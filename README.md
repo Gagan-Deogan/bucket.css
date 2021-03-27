@@ -4,7 +4,7 @@ A lightweight and responsive  ui library .
 - Responvise Layouts
 - Cross browser support
 - Helper classes
-Components 
+# Components 
 - Avatars
 - Badges
 - Responsive Grid System
