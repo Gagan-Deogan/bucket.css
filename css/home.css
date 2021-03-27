@@ -1,0 +1,8 @@
+main{
+    min-height: 100vh;
+}
+main h1{
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--primary-default);
+}

@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/prism.css">
+    <link rel="stylesheet" href="../css/bucket.css">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body class="row jst-str">
+    <div class="pos-f-r">
+        <button class="link-btn" onclick="toggleTheme()">
+            <img src="../assests/moon.svg" id='toogle-img' alt="">
+        </button>
+    </div>
+    <nav class="md-hide col" >
+        <h4>GETTING STARTED</h4>
+        <a href="#usage" class="options bor-rad-4">
+            Usage
+        </a>
+        <h4>MENU</h4>
+        <a href="#utils" class="options bor-rad-4">
+            Utils
+        </a>
+        <a href="#typography" class="options bor-rad-4">
+            Typography
+        </a>
+        <a href="#avatars" class="options bor-rad-4">
+            Avatars
+        </a>
+        <a href="#grids" class="options bor-rad-4">
+            Grid System
+        </a>
+        <a href="#buttons" class="options bor-rad-4">
+            Button
+        </a>
+        <a href="#cards" class="options bor-rad-4">
+            Card
+        </a>
+        <a href="#snackbars" class="options bor-rad-4">
+            Snackbar
+        </a>
+        <a href="#inputs" class="options bor-rad-4">
+            Inputs
+        </a>
+        <a href="#navbar" class="options bor-rad-4">
+            Navbar
+        </a>
+        <a href="#model" class="options bor-rad-4">
+            Model
+        </a>
+    </nav>
+    <nav class="mob-men hide" id='mob-nav'>
+        <ul>
+            <li>
+                <a href="#grids" class="options_mob">
+                    Grid System
+                </a>
+            </li>
+            <li>
+                <a href="#buttons" class="options_mob">
+                    Button
+                </a>
+            </li>
+            <li>
+                <a href="#cards" class="options_mob">
+                    Card
+                </a>
+            </li>
+        </ul>
+    </nav>
+<main class="md-w12">
+    <button class="btn-flt box-shd hide md-dis" id='show-menu'  >
+        <img src="../assests/menu.svg" alt="">
+    </button>
+
+    <section id="usage">
+        <h2 class="is_active">GETTING STARTED</h2>
+        <p>Add the library by including the CSS and JavaScript files from CDN</p>
+        <pre ><code class="language-markup">https://bucketcss.netlify.app/css/bucket-minify.css</code></pre>
+        <pre ><code class="language-markup">https://bucketcss.netlify.app/js/bucket.js</code></pre>
+    </section>
+
+    <section id="utils" >
+        <h2 class="is_active" >Utils classes 🧂</h2>
+        <p>Bucket Have some utils which can help you in making your design more balance and responsive. which also enhance the developments.</p>
+        <h3>Sizing Classes</h3>
+        <div class="row flx-wrp">
+            <div class="row w12 table-header">
+                <div class="col alg-str w3">
+                    <b>Class Name</b>
+                </div>
+                <div class="col alg-str w5">
+                    <b>Suffix</b>
+                </div>
+                <div class="col alg-str w4">
+                    <b>Breakpoints</b>
+                </div>
+            </div>
+            <div class="row w12 table-header">
+                <div class="col alg-str w3">
+                    <p>w</p>
+                </div>
+                <div class="col alg-str w5">
+                    <p>1 to 12</p>
+                </div>
+                <div class="col alg-str w4">
+                    <p>It will gives the width according to parent.</p>
+                </div>
+            </div>
+            <div class="row w12 table-header">
+                <div class="col alg-str w3">
+                    <p>mag</p>
+                </div>
+                <div class="col alg-str w5">
+                    <p>4 to 64</p>
+                </div>
+                <div class="col alg-str w4">
+                    <p>It will gives Margin to the elements from all four side. for specific side use mag-r-4, mag-l-4, mag-t-4, mag-b-4</p>
+                </div>
+            </div>
+            <div class="row w12 table-header">
+                <div class="col alg-str w3">
+                    <p>pad</p>
+                </div>
+                <div class="col alg-str w5">
+                    <p>4 to 64</p>
+                </div>
+                <div class="col alg-str w4">
+                    <p>It will gives Padding to the elements from all four side. for specific side use pad-r-4, pad-l-4, pad-t-4, pad-b-4</p>
+                </div>
+            </div>
+            <div class="row w12 table-header">
+                <div class="col alg-str w3">
+                    <p>bor-rad</p>
+                </div>
+                <div class="col alg-str w5">
+                    <p>4 to 8</p>
+                </div>
+                <div class="col alg-str w4">
+                    <p>It will give the border-radius to the elements</p>
+                </div>
+            </div>
+            <div class="row w12 table-header">
+                <div class="col alg-str w3">
+                    <p>bor-sol</p>
+                </div>
+                <div class="col alg-str w5">
+                    <p>---</p>
+                </div>
+                <div class="col alg-str w4">
+                    <p>It gives the solid border of 1px to the elements</p>
+                </div>
+            </div>
+            <div class="row w12 table-header">
+                <div class="col alg-str w3">
+                    <p>box-shd</p>
+                </div>
+                <div class="col alg-str w5">
+                    <p>---</p>
+                </div>
+                <div class="col alg-str w4">
+                    <p>It will gives the box-shadow property to the elements.</p>
+                </div>
+            </div>
+            <div class="row w12 table-header">
+                <div class="col alg-str w3">
+                    <p>hide</p>
+                </div>
+                <div class="col alg-str w5">
+                    <p>---</p>
+                </div>
+                <div class="col alg-str w4">
+                    <p>It will hide the element . for hidding element when viewport size is less then 600px use sm-hide and 900px use md-hide</p>
+                </div>
+            </div>
+            <div class="row w12 table-header">
+                <div class="col alg-str w3">
+                    <p>dis</p>
+                </div>
+                <div class="col alg-str w5">
+                    <p>---</p>
+                </div>
+                <div class="col alg-str w4">
+                    <p>It will display:block to the element.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="typography" >
+        <h2 class="is_active" >Typography 📝</h2>
+        <p>Bucket typo are set with rem ( 1rem=16px ) to make it responsive to screens. Each typo have line-height, font-weight, font-size . Typo base is Lato severed by Google. </p>
+        <h3>Example</h3>
+        <div>
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+            <h6>Heading 6</h6>
+            <p class="bold gry" >This is bold and grey paragraph.</p>
+<pre ><code class="language-markup">&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+&lt;h4&gt;Heading 4&lt;/h4&gt;
+&lt;h5&gt;Heading 5&lt;/h5&gt;
+&lt;h6&gt;Heading 6&lt;/h6&gt;
+&lt;p class=&quot;bold gry&quot; &gt;This is bold and grey paragraph.&lt;/p&gt;</code></pre>
+        </div>
+    </section>
+
+    <section id="avatars" >
+        <h2 class="bold is_active" >Avatars 👽</h2>
+        <p>Avatars can contain simple characters or Image .It have two variants (circle and rounded square) .It can have badge so you need to <b>bdge</b> class. to make size small of avatars use prefix <b>sm</b>.</p>
+        <h3 class="bold" >Examples</h3>
+        <div class="row">
+            <div class="avtr-clr">
+                <h4>A</h4>
+            </div>
+            <div class="avtr-clr">
+                <span class="bdge" >5</span>
+                <h4>A</h4>
+            </div>
+            <div class="avtr-sq">
+                <h4>A</h4>
+            </div>
+            <div class="avtr-sq">
+                <span class="bdge" >5</span>
+                <h4>A</h4>
+            </div>
+            <div class="avtr-clr">
+                <img src="../assests/user.jpg" alt="Avatar Image">
+            </div>
+            <div class="avtr-clr">
+                <span class="bdge" > 5 </span>
+                <img src="../assests/user.jpg" alt="Avatar Image">
+            </div>
+            <div class="avtr-sq">
+                <img src="../assests/user.jpg" alt="Avatar Image">
+            </div>
+            <div class="avtr-sq">
+                <span class="bdge" >5</span>
+                <img src="../assests/user.jpg" alt="Avatar Image">
+            </div>
+        </div>
+        <div class="row">
+            <div class="sm-avtr-clr">
+                <span class="bdge" >5</span>
+                <h4>A</h4>
+            </div>
+            <div class="sm-avtr-clr">
+                <img src="../assests/user.jpg" alt="Avatar Image">
+            </div>
+            <div class="sm-avtr-clr mag-r-8">
+                <span class="bdge" >12</span>
+                <img src="../assests/user.jpg" alt="Avatar Image">
+            </div>
+            <div class="sm-avtr-sq ">
+                <img src="../assests/user.jpg" alt="Avatar Image">
+            </div>
+            <div class="sm-avtr-sq">
+                <span class="bdge" >5</span>
+                <img src="../assests/user.jpg" alt="Avatar Image">
+            </div>
+        </div>
+<pre ><code class="language-markup">&lt;div class=&quot;avtr-clr&quot;&gt;
+    &lt;h4&gt;A&lt;/h4&gt;
+&lt;/div&gt;
+&lt;div class=&quot;avtr-clr&quot;&gt;
+    &lt;span class=&quot;bdge&quot; &gt;5&lt;/span&gt;
+    &lt;h4&gt;A&lt;/h4&gt;
+&lt;/div&gt;
+&lt;div class=&quot;avtr-sq&quot;&gt;
+    &lt;h4&gt;A&lt;/h4&gt;
+&lt;/div&gt;
+&lt;div class=&quot;avtr-sq&quot;&gt;
+    &lt;span class=&quot;bdge&quot; &gt;5&lt;/span&gt;
+    &lt;h4&gt;A&lt;/h4&gt;
+&lt;/div&gt;
+&lt;div class=&quot;avtr-clr&quot;&gt;
+    &lt;img src=&quot;&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;avtr-clr&quot;&gt;
+    &lt;span class=&quot;bdge&quot; &gt; 5 &lt;/span&gt;
+    &lt;img src=&quot;&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;avtr-sq&quot;&gt;
+    &lt;img src=&quot;&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;avtr-sq&quot;&gt;
+    &lt;span class=&quot;bdge&quot; &gt;5&lt;/span&gt;
+    &lt;img src=&quot;&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;</code></pre>
+    </section>
+
+    <section id="grids">
+        <h2 class="bold is_active">Grid System 🧱</h2>
+        <p >This grid system is based on flexbox. It have 3 breakpoints 0-600px (sm prefix) , 600px-900px (md prefix) and 900px to Infinity px (no prefix). By using this you can achieve responsive design in easier way.</p>
+        <h3>Examples</h3>
+        <div class="row container flx-wrp w12">
+            <div class="col sm-w11 md-w7 w6 alg-ctr item " >sm-w11 md-w7 w6</div>
+            <div class="col sm-w11 md-w7 w6 alg-ctr item " >sm-w11 md-w7 w6</div>
+            <div class="col sm-w4 md-w3 w4 alg-ctr item " >sm-w4 md-w3 w4</div>
+            <div class="col sm-w8 md-w9 w8 alg-ctr item " >sm-w8 md-w9 w8</div>
+            <div class="col sm-w6 md-w4 w5 alg-ctr item " >sm-w6 md-w4 w5</div>
+            <div class="col sm-w6 md-w8 w7 alg-ctr item " >sm-w6 md-w8 w7</div>
+        </div>
+        <pre ><code class="language-markup">&lt;div class=&quot;row container flx-wrp w12&quot;&gt;
+    &lt;div class=&quot;col sm-w11 md-w7 w6 alg-ctr &quot; &gt;sm-w11 md-w7 w6&lt;/div&gt;
+    &lt;div class=&quot;col sm-w11 md-w7 w6 alg-ctr &quot; &gt;sm-w11 md-w7 w6&lt;/div&gt;
+    &lt;div class=&quot;col sm-w4 md-w3 w4 alg-ctr &quot; &gt;sm-w4 md-w3 w4&lt;/div&gt;
+    &lt;div class=&quot;col sm-w8 md-w9 w8 alg-ctr &quot; &gt;sm-w8 md-w9 w8&lt;/div&gt;
+    &lt;div class=&quot;col sm-w6 md-w4 w5 alg-ctr &quot; &gt;sm-w6 md-w4 w5&lt;/div&gt;
+    &lt;div class=&quot;col sm-w6 md-w8 w7 alg-ctr &quot; &gt;sm-w6 md-w8 w7&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    
+        <div class="row flx-wrp">
+            <div class="row w12 table-header">
+                <div class="col alg-str w3">
+                    <b>Class</b>
+                </div>
+                <div class="col alg-str w5">
+                    <b>CSS property</b>
+                </div>
+                <div class="col alg-str w4">
+                    <b>Breakpoints</b>
+                </div>
+            </div>
+            <div class="row w12 table-header">
+                <div class="col alg-str w3">
+                    <p>row</p>
+                </div>
+                <div class="col alg-str w5">
+                    <p>flex-direction: row</p>
+                </div>
+                <div class="col alg-str w4">
+                    <p>sm , md</p>
+                </div>
+            </div>
+            <div class="row w12 table-header">
+                <div class="col alg-str w3">
+                    <p>col</p>
+                </div>
+                <div class="col alg-str w5">
+                    <p>flex-direction: column</p>
+                </div>
+                <div class="col alg-str w4">
+                    <p>sm , md</p>
+                </div>
+            </div>
+            <div class="row w12 table-header">
+                <div class="col alg-str w3">
+                    <p>jst-ctr</p>
+                </div>
+                <div class="col alg-str w5">
+                    <p>justify-content: center</p>
+                </div>
+                <div class="col alg-str w4">
+                    <p>sm , md</p>
+                </div>
+            </div>
+            <div class="row w12 table-header">
+                <div class="col alg-str w3">
+                    <p>jst-str</p>
+                </div>
+                <div class="col alg-str w5">
+                    <p>justify-content: start</p>
+                </div>
+                <div class="col alg-str w4">
+                    <p>sm , md</p>
+                </div>
+            </div>
+            <div class="row w12 table-header">
+                <div class="col alg-str w3">
+                    <p>jst-end</p>
+                </div>
+                <div class="col alg-str w5">
+                    <p>justify-content: end</p>
+                </div>
+                <div class="col alg-str w4">
+                    <p>sm , md</p>
+                </div>
+            </div>
+            <div class="row w12 table-header">
+                <div class="col alg-str w3">
+                    <p>jst-spa-ard</p>
+                </div>
+                <div class="col alg-str w5">
+                    <p>justify-content: space-around</p>
+                </div>
+                <div class="col alg-str w4">
+                    <p>sm , md</p>
+                </div>
+            </div>
+            <div class="row w12 table-header">
+                <div class="col alg-str w3">
+                    <p>jst-spa-eve</p>
+                </div>
+                <div class="col alg-str w5">
+                    <p>justify-content: space-evenly</p>
+                </div>
+                <div class="col alg-str w4">
+                    <p>sm , md</p>
+                </div>
+            </div>
+            <div class="row w12 table-header">
+                <div class="col alg-str w3">
+                    <p>alg-str</p>
+                </div>
+                <div class="col alg-str w5">
+                    <p>align-items: flex-start</p>
+                </div>
+                <div class="col alg-str w4">
+                    <p>sm , md</p>
+                </div>
+            </div>
+            <div class="row w12 table-header">
+                <div class="col alg-str w3">
+                    <p>alg-ctr</p>
+                </div>
+                <div class="col alg-str w5">
+                    <p>align-items: center</p>
+                </div>
+                <div class="col alg-str w4">
+                    <p>sm , md</p>
+                </div>
+            </div>
+            <div class="row w12 table-header">
+                <div class="col alg-str w3">
+                    <p>alg-end</p>
+                </div>
+                <div class="col alg-str w5">
+                    <p>align-items: flex-end</p>
+                </div>
+                <div class="col alg-str w4">
+                    <p>sm , md</p>
+                </div>
+            </div>
+            <div class="row w12 table-header">
+                <div class="col alg-str w3">
+                    <p>flx-wrp</p>
+                </div>
+                <div class="col alg-str w5">
+                    <p>flex-wrap: wrap</p>
+                </div>
+                <div class="col alg-str w4">
+                    <p>sm , md</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- button -->
+    <section id="buttons">
+        <h2 class="is_active">Buttons 🔼</h2>
+        <p>Bucket have 2 different variant and 2 different sizes of Buttons. Buttons can also contain icon or link. Use this in a way that is appropriate to you .</p>
+        <h3># Big Bottons</h3>
+        <div class="row flx-wrp ">
+            <button class="btn-pry mag-8">Button 1</button>
+            <button class="btn-pry mag-8">
+                <img src="../assests/check-primary.svg" class="str-icon" alt="">
+                Button 2
+            </button>
+            <button class="btn-pry mag-8">
+                Button 3
+                <img src="../assests/check-primary.svg" class="end-icon" alt="">
+            </button>
+            <button class="btn-pry btn-dis mag-8">Button 4</button>
+        </div>
+
+        <div class="row flx-wrp">
+            <button class="btn-pry-fil mag-8">Button 5</button>
+            <button class="btn-pry-fil mag-8">
+                <img src="../assests/check_circle_outline_white_24dp.svg" class="str-icon" alt="">
+                Button 6
+            </button>
+            <button class="btn-pry-fil mag-8">
+                Button 7
+                <img src="../assests/check_circle_outline_white_24dp.svg" class="end-icon" alt="">
+            </button>
+            <button class="btn-pry-fil btn-dis mag-8" >Button 8</button>
+        </div>
+        <pre ><code class="language-markup">&lt;button class=&quot;btn-pry&quot;&gt;Button 1&lt;/button&gt;
+&lt;button class=&quot;btn-pry&quot;&gt;
+    &lt;img src=&quot;&quot; class=&quot;str-icon&quot; alt=&quot;&quot;&gt;
+    Button 2
+&lt;/button&gt;
+&lt;button class=&quot;btn-pry&quot;&gt;
+    Button 3
+    &lt;img src=&quot;&quot; class=&quot;end-icon&quot; alt=&quot;&quot;&gt;
+&lt;/button&gt;
+&lt;button class=&quot;btn-pry btn-dis&quot; &gt;Button 4&lt;/button&gt;
+&lt;button class=&quot;btn-pry-fil mag-8&quot;&gt;Button 5&lt;/button&gt;
+&lt;button class=&quot;btn-pry-fil mag-8&quot;&gt;
+    &lt;img src=&quot;&quot; class=&quot;str-icon&quot; alt=&quot;&quot;&gt;
+    Button 6
+&lt;/button&gt;
+&lt;button class=&quot;btn-pry-fil mag-8&quot;&gt;
+    Button 7
+    &lt;img src=&quot;&quot; class=&quot;end-icon&quot; alt=&quot;&quot;&gt;
+&lt;/button&gt;
+&lt;button class=&quot;btn-pry-fil btn-dis mag-8&quot; &gt;Button 8&lt;/button&gt;</code></pre>
+
+            <h3># Small Bottons</h3>
+            <div class="row w12 flx-wrp">
+                <button class="sm-btn-pry mag-8">Button 1</button>
+                <button class="sm-btn-pry mag-8">
+                    <img src="../assests/check-primary.svg" class="str-icon" alt="">
+                    button 2
+                </button>
+                <button class="sm-btn-pry mag-8">
+                    Button 3
+                    <img src="../assests/check-primary.svg" class="end-icon" alt="">
+                </button>
+                <button class="sm-btn-pry btn-dis mag-8">Button 4</button>
+            </div>
+            <div class="row flx-wrp">
+                <button class="sm-btn-pry-fil mag-8">Button 5</button>
+                <button class="sm-btn-pry-fil mag-8">
+                    <img src="../assests/check_circle_outline_white_24dp.svg" class="str-icon" alt="">
+                    Button 6
+                </button>
+                <button class="sm-btn-pry-fil mag-8">
+                    Button 7
+                    <img src="../assests/check_circle_outline_white_24dp.svg" class="end-icon" alt="">
+                </button>
+                <button class="sm-btn-pry-fil btn-dis mag-8">Button 8</button>
+            </div>
+<pre ><code class="language-markup">&lt;button class=&quot;sm-btn-pry&quot;&gt;Button 1&lt;/button&gt;
+&lt;button class=&quot;sm-btn-pry&quot;&gt;
+    &lt;img src=&quot;&quot; class=&quot;str-icon&quot; alt=&quot;&quot;&gt;
+    button 2
+&lt;/button&gt;
+&lt;button class=&quot;sm-btn-pry&quot;&gt;
+    Button 3
+    &lt;img src=&quot;&quot; class=&quot;end-icon&quot; alt=&quot;&quot;&gt;
+&lt;/button&gt;
+&lt;button class=&quot;sm-btn-pry btn-dis&quot;&gt;Button 4&lt;/button&gt;
+&lt;button class=&quot;sm-btn-pry-fil &quot;&gt;Button 5&lt;/button&gt;
+&lt;button class=&quot;sm-btn-pry-fil &quot;&gt;
+    &lt;img src=&quot;&quot; class=&quot;str-icon&quot; alt=&quot;&quot;&gt;
+    Button 6
+&lt;/button&gt;
+&lt;button class=&quot;sm-btn-pry-fil &quot;&gt;
+    Button 7
+    &lt;img src=&quot;&quot; class=&quot;end-icon&quot; alt=&quot;&quot;&gt;
+&lt;/button&gt;
+&lt;button class=&quot;sm-btn-pry-fil btn-dis &quot;&gt;Button 8&lt;/button&gt;</code></pre>
+        <h3># Link Bottons and Icon Button</h3>
+        <div class="row flx-wrp">
+            <button class="link-btn mag-r-8">
+                See More
+            </button>
+            <button class="icn-btn" >
+                <img src="../assests/add.svg" alt="">
+            </button>
+        </div>
+<pre ><code class="language-markup">&lt;a href='' class=&quot;link-btn&quot;&gt;
+    See More
+&lt;/a&gt;
+&lt;button class=&quot;icn-btn&quot; &gt;
+    &lt;img src=&quot;&quot; alt=&quot;&quot;&gt;
+&lt;/button&gt;</code></pre>
+    </section>
+    <!-- cards -->
+    <section id="cards" >
+        <h2 class="is_active">Cards 🃏</h2>
+        <p>Bucket have wide variety of cards. They Support wide varienty content of Images, Text, Labels, Ratings, Primary call to action Buttons and Icon Buttons. These are made  </p>
+        <h3 class="bold"># Horitozal Card</h3>
+        <div class="col crd-cont pos-r  hov-box-shd bor-rad-8 bor-sol ">
+            <div class="crd-badge">
+                <span>New!</span>
+            </div>
+            <img src="../assests/plant.jpg" class="w12 bor-rad-8 " alt="">
+            <div class="col crd-title">
+                <h4>Plants</h4>
+                <h6 class="bold" >Rs. 500</h6>
+                <button class="sm-btn-pry-fil" >
+                    Add to cart
+                </button>
+            </div>
+            <button class="icn-btn crd-wish" >
+                <img src="../assests/fav.svg" alt="">
+            </button>
+            <div class="crd-ratg row">
+                <h6 class="bold mag-r-4">4.4</h6>
+                <img src="../assests/star.svg"  alt="Star icon">
+            </div>
+        </div>
+<pre ><code class="language-markup">&lt;div class=&quot;col crd-cont pos-r  hov-box-shd bor-rad-8 bor-sol &quot;&gt;
+    &lt;div class=&quot;crd-badge&quot;&gt;
+        &lt;span&gt;New!&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;img src=&quot;../assests/plant.jpg&quot; class=&quot;w12 bor-rad-8 &quot; alt=&quot;&quot;&gt;
+    &lt;div class=&quot;col crd-title&quot;&gt;
+        &lt;h4&gt;Plants&lt;/h4&gt;
+        &lt;h6 class=&quot;bold&quot; &gt;Rs. 500&lt;/h6&gt;
+        &lt;button class=&quot;sm-btn-pry-fil&quot; &gt;
+            Add to cart
+        &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;button class=&quot;icn-btn crd-wish&quot; &gt;
+        &lt;img src=&quot;../assests/fav.svg&quot; alt=&quot;&quot;&gt;
+    &lt;/button&gt;
+    &lt;div class=&quot;crd-ratg row&quot;&gt;
+        &lt;h6 class=&quot;bold mag-r-4&quot;&gt;4.4&lt;/h6&gt;
+        &lt;img src=&quot;../assests/star.svg&quot;  alt=&quot;Star icon&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        <h3 class="bold"># Text Overlay Card</h3>
+        <div class=" col crd-cont ovr-flw hov-box-shd bor-rad-8">
+            <div class="crd-badge">
+                <span>New!</span>
+            </div>
+            <img src="../assests/plant.jpg" class="w12" alt="">
+            <div class="col crd-title w12">
+                <h4>Plants</h4>
+                <h6 class="bold" >Rs. 500</h6>
+                <button class="sm-btn-pry-fil" >
+                    Add to cart
+                </button>
+            </div>
+            <button class="icn-btn crd-wish" >
+                <img src="../assests/fav.svg" alt="">
+            </button>
+            <div class="crd-ratg row">
+                <h6 class="bold mag-r-4">4.4</h6>
+                <img src="../assests/star.svg" alt="Star icon">
+            </div>
+        </div>
+<pre ><code class="language-markup">&lt;div class=&quot; col crd-cont ovr-flw hov-box-shd bor-rad-8&quot;&gt;
+    &lt;div class=&quot;crd-badge&quot;&gt;
+        &lt;span&gt;New!&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;img src=&quot;../assests/plant.jpg&quot; class=&quot;w12&quot; alt=&quot;&quot;&gt;
+    &lt;div class=&quot;col crd-title w12&quot;&gt;
+        &lt;h4&gt;Plants&lt;/h4&gt;
+        &lt;h6 class=&quot;bold&quot; &gt;Rs. 500&lt;/h6&gt;
+        &lt;button class=&quot;sm-btn-pry-fil&quot; &gt;
+            Add to cart
+        &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;button class=&quot;icn-btn crd-wish&quot; &gt;
+        &lt;img src=&quot;../assests/fav.svg&quot; alt=&quot;&quot;&gt;
+    &lt;/button&gt;
+    &lt;div class=&quot;crd-ratg row&quot;&gt;
+        &lt;h6 class=&quot;bold mag-r-4&quot;&gt;4.4&lt;/h6&gt;
+        &lt;img src=&quot;../assests/star.svg&quot; alt=&quot;Star icon&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        <h3># Vertical Card</h3>
+        <div class="row crd-cont row typ-vrt hov-box-shd bor-rad-8 bor-sol ">
+            <div class="crd-badge">
+                <span>New!</span>
+            </div>
+            <img src="../assests/plant.jpg" class="w5 bor-rad-8" alt="">
+            <div class="col crd-title eight">
+                <h4>Plants</h4>
+                <h6 class="bold" >Rs. 500</h6>
+                <button class="sm-btn-pry-fil" >
+                    Add to cart
+                </button>
+            </div>
+            <button class="icn-btn crd-wish" >
+                <img src="../assests/fav.svg" alt="">
+            </button>
+            <div class="crd-ratg row">
+                <h6 class="bold mag-r-4">4.4</h6>
+                <img src="../assests/star.svg" alt="Star icon">
+            </div>
+        </div>
+<pre ><code class="language-markup">&lt;div class=&quot;row crd-cont row typ-vrt hov-box-shd bor-rad-8 bor-sol &quot;&gt;
+    &lt;div class=&quot;crd-badge&quot;&gt;
+        &lt;span&gt;New!&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;img src=&quot;../assests/plant.jpg&quot; class=&quot;w5 bor-rad-8&quot; alt=&quot;&quot;&gt;
+    &lt;div class=&quot;col crd-title eight&quot;&gt;
+        &lt;h4&gt;Plants&lt;/h4&gt;
+        &lt;h6 class=&quot;bold&quot; &gt;Rs. 500&lt;/h6&gt;
+        &lt;button class=&quot;sm-btn-pry-fil&quot; &gt;
+            Add to cart
+        &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;button class=&quot;icn-btn crd-wish&quot; &gt;
+        &lt;img src=&quot;../assests/fav.svg&quot; alt=&quot;&quot;&gt;
+    &lt;/button&gt;
+    &lt;div class=&quot;crd-ratg row&quot;&gt;
+        &lt;h6 class=&quot;bold mag-r-4&quot;&gt;4.4&lt;/h6&gt;
+        &lt;img src=&quot;../assests/star.svg&quot; alt=&quot;Star icon&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </section>
+    <section id="snackbars">
+        <h2 class="is_active">Snackbar 🍫</h2>
+        <p>Bucket 4 varieties of snackbar. It will postion to Right top of the screen and have cool animation effect.(.pstn-rgt)</p>
+        <h3>Examples</h3>
+        <div class="snk-bar">
+            <h5>Hello, this is snackbar</h5>
+            <button class="link-btn">
+                <img src="../assests/close-white.svg" alt="">
+            </button>
+        </div>
+        <div class="mag-t-8 snk-bar-err ">
+            <img src="../assests/alert-circle.svg" alt="">
+            <h5>Hello, this is snackbar</h5>
+            <button class="link-btn">
+                <img src="../assests/close-white.svg" alt="">
+            </button>
+        </div>
+        <div class="mag-t-8 snk-bar-war ">
+            <img src="../assests/alert-triangle.svg" alt="">
+            <h5>Hello, this is snackbar</h5>
+            <button class="link-btn">
+                <img src="../assests/close-white.svg" alt="">
+            </button>
+        </div>
+        <div class="mag-t-8 snk-bar-suc ">
+            <img src="../assests/check.svg" alt="">
+            <h5>Hello, this is snackbar</h5>
+            <button class="link-btn">
+                <img src="../assests/close-white.svg" alt="">
+            </button>
+        </div>
+<pre ><code class="language-markup">&lt;div class=&quot;snk-bar&quot;&gt;
+    &lt;h5&gt;Hello, this is snackbar&lt;/h5&gt;
+    &lt;button class=&quot;link-btn&quot;&gt;
+        &lt;img src=&quot;../assests/close-white.svg&quot; alt=&quot;&quot;&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot; snk-bar-err &quot;&gt;
+    &lt;img src=&quot;../assests/alert-circle.svg&quot; alt=&quot;&quot;&gt;
+    &lt;h5&gt;Hello, this is snackbar&lt;/h5&gt;
+    &lt;button class=&quot;link-btn&quot;&gt;
+        &lt;img src=&quot;../assests/close-white.svg&quot; alt=&quot;&quot;&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot; snk-bar-war &quot;&gt;
+    &lt;img src=&quot;../assests/alert-triangle.svg&quot; alt=&quot;&quot;&gt;
+    &lt;h5&gt;Hello, this is snackbar&lt;/h5&gt;
+    &lt;button class=&quot;link-btn&quot;&gt;
+        &lt;img src=&quot;../assests/close-white.svg&quot; alt=&quot;&quot;&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot; snk-bar-suc &quot;&gt;
+    &lt;img src=&quot;../assests/check.svg&quot; alt=&quot;&quot;&gt;
+    &lt;h5&gt;Hello, this is snackbar&lt;/h5&gt;
+    &lt;button class=&quot;link-btn&quot;&gt;
+        &lt;img src=&quot;../assests/close-white.svg&quot; alt=&quot;&quot;&gt;
+    &lt;/button&gt;
+&lt;/div&gt;</code></pre>
+    </section>
+    <section id="inputs">
+        <h2 class="is_active"># Inputs</h2>
+        <p>Input elements are essential blocks of Any form.</p>
+        <h3>Examples</h3>
+        <div class="row">
+            <form class="col">
+                <Input type="text" placeholder="Name" name='' ></Input>
+                <div class="hlp-txt">Help text</div>
+                <br>
+                <Input type="text" placeholder="Name" name='' class="err-txt-area mag-t-16" ></Input>
+                <div class="err-txt">Error text</div>
+            </form>
+        </div>
+<pre ><code class="language-markup">&lt;Input type=&quot;text&quot; placeholder=&quot;Name&quot; name='' &gt;&lt;/Input&gt;
+&lt;div class=&quot;hlp-txt&quot;&gt;Help text&lt;/div&gt;
+&lt;Input type=&quot;text&quot; placeholder=&quot;Name&quot; name='' class=&quot;err-txt-area&quot; &gt;&lt;/Input&gt;
+&lt;div class=&quot;err-txt&quot;&gt;Error text&lt;/div&gt;</code></pre>
+    </section>
+    <section id="navbar">
+        <h2 class="is_active">#Navbar</h2>
+        <p>Bucket have responsive nav which can contain logo, links and drop downs. Most of the styling is done by the utils classes.</p>
+        <h3>Examples</h3>
+        <div class="nav row jst-spa-btw">
+            <a href="" class="nav-logo">
+                <img src="../assests/images.png" alt="">
+            </a>
+            <div class="nav-lnks row sm-hide">
+                <a class="link-btn">Link 1</a>
+                <button class="link-btn "  id="drop-down" >Link 2<img src="../assests/chevron-down.svg" class="end-icon" alt="">
+                    <ul id="drop-down-menu" >
+                        <li>Link 3</li>
+                        <li>Link 4</li>
+                        <li>Link 5</li>
+                    </ul>
+                </button>
+            </div>
+            <button class="link-btn sm-dis" id="hambuger" >
+                <img src="../assests/menu.svg" alt="">
+                <ul id="hambuger-expand" id="hambuger-expand" >
+                    <li>Link 1</li>
+                    <li>Link 2</li>
+                    <li>Link 3</li>
+                    <li>Link 4</li>
+                    <li>Link 5</li>
+                </ul>
+            </button>
+        </div>
+<pre ><code class="language-markup">&lt;header class=&quot;nav row jst-spa-btw&quot;&gt;
+    &lt;a href=&quot;&quot; class=&quot;nav-logo&quot;&gt;
+        &lt;img src=&quot;&quot; alt=&quot;&quot;&gt;
+    &lt;/a&gt;
+    &lt;div class=&quot;nav-lnks row sm-hide&quot;&gt;
+        &lt;a class=&quot;link-btn&quot;&gt;Link 1&lt;/a&gt;
+        &lt;button class=&quot;link-btn &quot;  id=&quot;drop-down&quot; &gt;
+            Link 2
+            &lt;img src=&quot;&quot; class=&quot;end-icon&quot; alt=&quot;&quot;&gt;
+            &lt;ul id=&quot;drop-down-menu&quot; &gt;
+                &lt;li&gt;Link 3&lt;/li&gt;
+                &lt;li&gt;Link 4&lt;/li&gt;
+                &lt;li&gt;Link 5&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;button class=&quot;link-btn sm-dis&quot; id=&quot;hambuger&quot; &gt;
+        &lt;img src=&quot;&quot; alt=&quot;&quot;&gt;
+        &lt;ul id=&quot;hambuger-expand&quot; id=&quot;hambuger-expand&quot; &gt;
+            &lt;li&gt;Link 1&lt;/li&gt;
+            &lt;li&gt;Link 2&lt;/li&gt;
+            &lt;li&gt;Link 3&lt;/li&gt;
+            &lt;li&gt;Link 4&lt;/li&gt;
+            &lt;li&gt;Link 5&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/button&gt;
+&lt;/header &gt; </code></pre>
+    </section>
+    <section id="model" >
+        <h2 class="is_active">#Model</h2>
+        <p></p>
+        <h3>Examples</h3>
+        <div>
+            <button class="sm-btn-pry-fil" onclick="{openModel()}" >Click me!</button>
+        </div>
+        <div class="row">
+            <div class="mod-con pos-f jst-ctr alg-ctr box-shd " id='mod-con'>
+                <div class="mod sm-w9 md-w5 w4 bor-rad-4 box-shd">
+                    <h3>Hi, I am a model</h3>
+                    <p>This is my body</p>
+                    <div class="row jst-end alg-end">
+                        <button class="sm-btn-pry-fil mag-t-32" id="mod-ok" >OK</button>
+                    </div>
+                </div>
+            </div>  
+        </div>
+<pre ><code class="language-markup">&lt;div class=&quot;mod-con pos-f jst-ctr alg-ctr box-shd &quot; id='mod-con'&gt;
+    &lt;div class=&quot;mod sm-w9 md-w5 w4 bor-rad-4 box-shd&quot;&gt;
+        &lt;h3&gt;Hi, I am a model&lt;/h3&gt;
+        &lt;p&gt;This is my body&lt;/p&gt;
+        &lt;div class=&quot;row jst-end alg-end&quot;&gt;
+            &lt;button class=&quot;sm-btn-pry-fil mag-t-32&quot; id=&quot;mod-ok&quot; &gt;OK&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;  </code></pre>
+    </section>
+</main>
+    <script src="../js/mian.js" ></script>
+    <script src="../js/bucket.js" ></script>
+    <script src="../js/prism.js" ></script>
+</body>
+</html>

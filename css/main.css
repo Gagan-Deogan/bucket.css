@@ -1,0 +1,90 @@
+html {
+    scroll-behavior: smooth;
+}
+body{
+    max-width: 1440px;
+    margin: auto;
+    padding: 5vw 2vw;
+}
+section{
+    max-width: 1000px;
+    padding: 4vw 0;
+}
+.item{
+    padding: .5rem;
+    border: 1px solid var(--grey-light);
+}
+.table-header{
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--grey-light);
+}
+.table-header > div {
+    padding: 0 0 0 8px;
+}
+nav{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 80px;
+    width: 300px;
+    height: 100%;
+    padding: 16px 48px 24px 12px ;
+}
+nav a{
+    margin-top: 8px;
+    padding: 6px 10px ;
+}
+#mob-nav{
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: var(--background);
+}
+
+.flt-btn{
+    background: #eeeeee;
+}
+p{
+    color : var(--grey-default);
+}
+section > p{
+    margin: 1rem 0 0 0;
+}
+section > h2{
+    font-weight: 700;
+    border-bottom: 2px solid var(--grey-light);
+}
+section > h3{
+    font-weight: 700;
+    margin:2.5rem 0 0 0;
+}
+section > div{
+    margin:1.5rem 0 0 0;
+}
+.active_section{
+    border-radius: 4px;
+    background: var(--grey-light);
+    color: var(--primary-light);
+}
+nav h4{
+    margin-top: 1rem;
+    font-weight: 700;
+    /* border-bottom: 2px solid var(--grey-light); */
+}
+nav a:hover{
+    background: var(--grey-opac);
+}
+pre[class*="language-"] {
+    background: #142138;
+}
+body::-webkit-scrollbar {
+    width: 12px;
+    background-color: var(--grey-light);
+}
+body::-webkit-scrollbar-thumb{
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: var(--primary-default);
+}
