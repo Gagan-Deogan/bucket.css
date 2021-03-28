@@ -121,12 +121,7 @@ a,a:hover,a:focus,a:active,a:visited{
     text-decoration: none;
     color: inherit;
 }
-.hide{
-    display: none;
-}
-.dis{
-    display: block;
-}
+
 .pos-a{
     position: absolute;
 }
@@ -215,6 +210,15 @@ a,a:hover,a:focus,a:active,a:visited{
 }
 .flx-wrp{
     flex-wrap: wrap
+}
+.hide{
+    display: none;
+}
+.dis{
+    display: block;
+}
+.md-dis{
+    display: none;
 }
 .sm-dis{
     display: none;

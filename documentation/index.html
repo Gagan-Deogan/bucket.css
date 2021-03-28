@@ -7,22 +7,33 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../assests/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="../css/prism.css">
     <link rel="stylesheet" href="../css/bucket.css">
     <link rel="stylesheet" href="../css/main.css">
+    <meta name="color-scheme" content="dark light">
+
 </head>
 <body class="row jst-str">
-    <div class="pos-f-r">
-        <button class="link-btn" onclick="toggleTheme()">
+    <div class="pos-f-r row">
+        <a href="https://github.com/GagandeepSingh0115/bucket.css" target="_blank" class="link-btn mag-r-8 "  >
+            <img src="../assests/github.svg" alt="">
+        </a>
+        <button class="link-btn" id='theme-toggle'>
             <img src="../assests/moon.svg" id='toogle-img' alt="">
         </button>
     </div>
-    <nav class="md-hide col" >
-        <h4>GETTING STARTED</h4>
-        <a href="#usage" class="options bor-rad-4">
-            Usage
+    <div class="pos-f-l">
+        <a href="../index.html">
+            <img src="../assests/bucket-logo.svg" class="md-hide" alt="">
+            <img src="../assests/favicon.svg" class="md-dis" alt="">
         </a>
+    </div>
+    <nav class="col md-hide" >
         <h4>MENU</h4>
+        <a href="#gettingstarted" class="options bor-rad-4">
+            Getting Started
+        </a>
         <a href="#utils" class="options bor-rad-4">
             Utils
         </a>
@@ -54,35 +65,59 @@
             Model
         </a>
     </nav>
-    <nav class="mob-men hide" id='mob-nav'>
-        <ul>
-            <li>
-                <a href="#grids" class="options_mob">
-                    Grid System
-                </a>
-            </li>
-            <li>
-                <a href="#buttons" class="options_mob">
-                    Button
-                </a>
-            </li>
-            <li>
-                <a href="#cards" class="options_mob">
-                    Card
-                </a>
-            </li>
-        </ul>
+    <nav class="col mob-men hide" id='mob-nav'>
+        <h4>MENU</h4>
+        <a href="#gettingstarted" class="mob-options bor-rad-4" onclick="removeMoblieMenu()" >
+            Getting Started
+        </a>
+        <a href="#utils" class="mob-options bor-rad-4" onclick="removeMoblieMenu()" >
+            Utils
+        </a>
+        <a href="#typography" class="mob-options bor-rad-4" onclick="removeMoblieMenu()" >
+            Typography
+        </a>
+        <a href="#avatars" class="mob-options bor-rad-4" onclick="removeMoblieMenu()" >
+            Avatars
+        </a>
+        <a href="#grids" class="mob-options bor-rad-4" onclick="removeMoblieMenu()" >
+            Grid System
+        </a>
+        <a href="#buttons" class="mob-options bor-rad-4" onclick="removeMoblieMenu()" >
+            Button
+        </a>
+        <a href="#cards" class="mob-options bor-rad-4" onclick="removeMoblieMenu()" >
+            Card
+        </a>
+        <a href="#snackbars" class="mob-options bor-rad-4" onclick="removeMoblieMenu()">
+            Snackbar
+        </a>
+        <a href="#inputs" class="mob-options bor-rad-4"  onclick="removeMoblieMenu()" >
+            Inputs
+        </a>
+        <a href="#navbar" class="mob-options bor-rad-4"  onclick="removeMoblieMenu()" >
+            Navbar
+        </a>
+        <a href="#model" class="mob-options bor-rad-4"  onclick="removeMoblieMenu()" >
+            Model
+        </a>
     </nav>
 <main class="md-w12">
     <button class="btn-flt box-shd hide md-dis" id='show-menu'  >
-        <img src="../assests/menu.svg" alt="">
+        <img src="../assests/menu.svg" id="ham-icon" alt="">
     </button>
 
-    <section id="usage">
-        <h2 class="is_active">GETTING STARTED</h2>
+    <section id="gettingstarted">
+        <h2 class="is_active">Getting Started 🏃🏻‍♂️</h2>
         <p>Add the library by including the CSS and JavaScript files from CDN</p>
+        <h4 class="bold mag-t-64">Add CSS CDN in the head tags</h4>
         <pre ><code class="language-markup">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://bucketcss.netlify.app/css/bucket-minify.css&quot;&gt;</code></pre>
+        <h4  class="bold mag-t-64" >Add JS CDN near the closing body.</h4>
         <pre ><code class="language-markup">&lt;script src=&quot;https://bucketcss.netlify.app/js/bucket.js&quot; &gt;&lt;/script&gt;</code></pre>
+
+        <h4 class=" bold mag-t-64">You can also download it and manually add the files</h3>
+        <a href="../bucket.css.rar" download>
+            <button class="btn-pry-fil mag-t-16 ">Download</button>
+        </a>
     </section>
 
     <section id="utils" >
@@ -215,7 +250,7 @@
 
     <section id="avatars" >
         <h2 class="bold is_active" >Avatars 👽</h2>
-        <p>Avatars can contain simple characters or Image .It have two variants (circle and rounded square) .It can have badge so you need to <b>bdge</b> class. to make size small of avatars use prefix <b>sm</b>.</p>
+        <p>Avatars can contain simple characters or Image .It have two variants (circle and rounded square) .It can have badge so you need to add <b>bdge</b> class. To make size small of avatars use prefix <b>sm</b>.</p>
         <h3 class="bold" >Examples</h3>
         <div class="row">
             <div class="avtr-clr">
@@ -302,8 +337,8 @@
         <p >This grid system is based on flexbox. It have 3 breakpoints 0-600px (sm prefix) , 600px-900px (md prefix) and 900px to Infinity px (no prefix). By using this you can achieve responsive design in easier way.</p>
         <h3>Examples</h3>
         <div class="row container flx-wrp w12">
-            <div class="col sm-w11 md-w7 w6 alg-ctr item " >sm-w11 md-w7 w6</div>
-            <div class="col sm-w11 md-w7 w6 alg-ctr item " >sm-w11 md-w7 w6</div>
+            <div class="col sm-w12 md-w7 w6 alg-ctr item " >sm-w12 md-w7 w6</div>
+            <div class="col sm-w12 md-w7 w6 alg-ctr item " >sm-w12 md-w7 w6</div>
             <div class="col sm-w4 md-w3 w4 alg-ctr item " >sm-w4 md-w3 w4</div>
             <div class="col sm-w8 md-w9 w8 alg-ctr item " >sm-w8 md-w9 w8</div>
             <div class="col sm-w6 md-w4 w5 alg-ctr item " >sm-w6 md-w4 w5</div>
@@ -753,7 +788,7 @@
 &lt;/div&gt;</code></pre>
     </section>
     <section id="inputs">
-        <h2 class="is_active"># Inputs</h2>
+        <h2 class="is_active">Inputs 📲</h2>
         <p>Input elements are essential blocks of Any form.</p>
         <h3>Examples</h3>
         <div class="row">
@@ -771,7 +806,7 @@
 &lt;div class=&quot;err-txt&quot;&gt;Error text&lt;/div&gt;</code></pre>
     </section>
     <section id="navbar">
-        <h2 class="is_active">#Navbar</h2>
+        <h2 class="is_active">Navbar 🧭</h2>
         <p>Bucket have responsive nav which can contain logo, links and drop downs. Most of the styling is done by the utils classes.</p>
         <h3>Examples</h3>
         <div class="nav row jst-spa-btw">
@@ -829,7 +864,7 @@
     </section>
     <section id="model" >
         <h2 class="is_active">#Model</h2>
-        <p></p>
+        <p>Use bucket JavaScript to show and remove modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content.</p>
         <h3>Examples</h3>
         <div>
             <button class="sm-btn-pry-fil" onclick="{openModel()}" >Click me!</button>
@@ -859,5 +894,6 @@
     <script src="../js/mian.js" ></script>
     <script src="../js/bucket.js" ></script>
     <script src="../js/prism.js" ></script>
+    <script src="../js/darkmode.js" ></script>
 </body>
 </html>

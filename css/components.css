@@ -367,11 +367,27 @@ input:focus + .hlp-txt{
     position: fixed;
     top: 1.5rem;
     right: 2rem;
-    animation: snkbarmover 0.2s linear 0.05s;
+    animation: snkbarmoverRight 0.2s linear 0.05s;
 }
-@keyframes snkbarmover  {
+.pos-f-l{
+    position: fixed;
+    top: 1.5rem;
+    left: 2rem;
+    animation: snkbarmoverLeft 0.2s linear 0.05s;
+}
+@keyframes snkbarmoverRight  {
     0%{
         transform: translate( 30px , 0px);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+@keyframes snkbarmoverLeft  {
+    0%{
+        transform: translate( -30px , 0px);
         opacity: 0;
     }
     100%{
