@@ -11,7 +11,7 @@ body{
 }
 section{
     max-width: 1000px;
-    padding: 3.4rem 0;
+    padding: 6rem 0;
 }
 .item{
     padding: .5rem;
@@ -45,7 +45,10 @@ nav a{
     width: 100vw;
     background: var(--background);
 }
-
+.header{
+    background: var(--background) ;
+    z-index: 9999;
+}
 .flt-btn{
     background: #eeeeee;
 }
