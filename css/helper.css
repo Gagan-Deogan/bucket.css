@@ -121,6 +121,10 @@ a,a:hover,a:focus,a:active,a:visited{
     text-decoration: none;
     color: inherit;
 }
+a:focus{
+    outline: none;
+    box-shadow: 0 0 1px .09rem var(--primary-default);
+}
 
 .pos-a{
     position: absolute;
