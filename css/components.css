@@ -72,13 +72,16 @@ button ,.link-btn {
     cursor: pointer;
 }
 button:focus{
+    outline: none;
+}
+button:focus-visible{
     outline:none;
     box-shadow: 0 0 1px .09rem var(--primary-default);
 }
 button.btn-dis{
     border: 2px solid var(--grey-light);
     background: var(--background);
-    color: var(--grey-light);
+    color: var(--grey-default);
     pointer-events:none
 }
 button > .str-icon{
@@ -130,13 +133,13 @@ button:active{
     width: 2rem;
     height: 2rem;
     border-radius: 1.2rem;
-    background: var(--primary-default);
+    background: var(--grey-light);
 }
 
 .btn-pry-fil.btn-dis, .sm-btn-pry-fil.btn-dis{
     border: 2px solid var(--grey-light);
     background: var(--grey-light);
-    color: var(--inner-text);
+    color: var(--grey-default);
     pointer-events:none
 }
 
@@ -286,7 +289,7 @@ p{
 }
 /* typo end */
 /* form started */
-input{
+input[type=text], input[type=password]{
     padding: 0.68rem 1rem;
     border: 1px solid var(--primary-default);
     border-radius: 4px;
