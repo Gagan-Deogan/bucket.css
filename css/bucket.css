@@ -22,7 +22,7 @@ body{
     --red-default:#DC2626;
     --red-light:#EF4444;
 
-    --yellow-dark:#FACC15;
+    --yellow-dark:#e4b601;
     --yellow-default:#FACC15;
     --yellow-light:#FDE047;
 
@@ -35,7 +35,7 @@ body{
     --black:#111827;
     --inner-text:#f7fafc;
     --background:#f7fafc;
-    --inner-backgound: transparent ;
+    --inner-background: transparent ;
     --foreground:#0e182a;
     font-family: 'Lato', sans-serif;
     background-color: var(--background);
@@ -67,7 +67,7 @@ body.dark-theme{
     --black:#0e182a;
     --inner-text:#f7fafc;
     --background:#0e182a;
-    --inner-backgound:#142138;
+    --inner-background:#142138;
     --foreground:#f7fafc;
     
     --sm-pd: 0.5rem 3vw;
@@ -127,7 +127,7 @@ body.dark-theme{
         --red-default:#DC2626;
         --red-light:#EF4444;
 
-        --yellow-dark:#FACC15;
+        --yellow-dark:#e4b601;
         --yellow-default:#FACC15;
         --yellow-light:#FDE047;
 
