@@ -1,5 +1,5 @@
-const hamBugerMenu = document.getElementById("hambuger-expand")
-const dropDownMenu = document.getElementById("drop-down-menu")
+const hamBugerMenu = document.querySelector("#hambuger-expand")
+const dropDownMenu = document.querySelector("#drop-down-menu")
 
 const removeDropDown = () =>{
     dropDownMenu.style.display="none",
@@ -27,14 +27,14 @@ const showhamMenu = ()=>{
     hamBuger.addEventListener("click",removeHamMenu);
 }
 const openModel = () =>{
-    document.getElementById("model-container").style.display="flex";
+    document.querySelector("#model-container").style.display="flex";
     document.body.style.overflow = "hidden";
 } 
 const closeModel = () =>{
-    document.getElementById("model-container").style.display="none";
+    document.querySelector("#model-container").style.display="none";
     document.body.style.overflow = "auto";
 } 
-document.getElementById("model-ok").addEventListener("click",closeModel)
+document.querySelector("#model-ok").addEventListener("click",closeModel)
 
 const hamBuger = document.getElementById("hambuger");
 hamBuger.addEventListener("click",showhamMenu)

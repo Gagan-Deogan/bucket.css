@@ -1,19 +1,19 @@
 const removeMobileMenu = ()=>{
-    document.getElementById("mob-nav").style.display = "none"
+    document.querySelector("#mob-nav").style.display = "none"
     document.body.style.overflow = "auto";
-    document.getElementById("show-menu").removeEventListener("click",removeMobileMenu);
-    document.getElementById("show-menu").addEventListener("click",showMobileMenu);
-    document.getElementById("ham-icon").src = "../assests/menu.svg"
+    document.querySelector("#show-menu").removeEventListener("click",removeMobileMenu);
+    document.querySelector("#show-menu").addEventListener("click",showMobileMenu);
+    document.querySelector("#ham-icon").src = "../assests/menu.svg"
 }
 const showMobileMenu = ()=>{
-    document.getElementById("mob-nav").style.display = "flex"
+    document.querySelector("#mob-nav").style.display = "flex"
     document.body.style.overflow = "hidden";
-    document.getElementById("show-menu").removeEventListener("click",showMobileMenu);
-    document.getElementById("show-menu").addEventListener("click",removeMobileMenu);
-    document.getElementById("ham-icon").src = "../assests/close-white.svg"
+    document.querySelector("#show-menu").removeEventListener("click",showMobileMenu);
+    document.querySelector("#show-menu").addEventListener("click",removeMobileMenu);
+    document.querySelector("#ham-icon").src = "../assests/close-white.svg"
 }
 
-document.getElementById("show-menu").addEventListener("click",showMobileMenu);
+document.querySelector("#show-menu").addEventListener("click",showMobileMenu);
 
 const elementInViewport2 = (el) => {
     var top = el.offsetTop;
