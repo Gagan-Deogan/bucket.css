@@ -1,19 +1,19 @@
-const removeMoblieMenu = ()=>{
-    document.getElementById('mob-nav').style.display = 'none'
-    document.body.style.overflow = 'auto';
-    document.getElementById('show-menu').removeEventListener('click',removeMoblieMenu);
-    document.getElementById('show-menu').addEventListener('click',showMobileMenu);
-    document.getElementById('ham-icon').src = '../assests/menu.svg'
+const removeMobileMenu = ()=>{
+    document.getElementById("mob-nav").style.display = "none"
+    document.body.style.overflow = "auto";
+    document.getElementById("show-menu").removeEventListener("click",removeMobileMenu);
+    document.getElementById("show-menu").addEventListener("click",showMobileMenu);
+    document.getElementById("ham-icon").src = "../assests/menu.svg"
 }
 const showMobileMenu = ()=>{
-    document.getElementById('mob-nav').style.display = 'flex'
-    document.body.style.overflow = 'hidden';
-    document.getElementById('show-menu').removeEventListener('click',showMobileMenu);
-    document.getElementById('show-menu').addEventListener('click',removeMoblieMenu);
-    document.getElementById('ham-icon').src = '../assests/close-white.svg'
+    document.getElementById("mob-nav").style.display = "flex"
+    document.body.style.overflow = "hidden";
+    document.getElementById("show-menu").removeEventListener("click",showMobileMenu);
+    document.getElementById("show-menu").addEventListener("click",removeMobileMenu);
+    document.getElementById("ham-icon").src = "../assests/close-white.svg"
 }
 
-document.getElementById('show-menu').addEventListener('click',showMobileMenu);
+document.getElementById("show-menu").addEventListener("click",showMobileMenu);
 
 const elementInViewport2 = (el) => {
     var top = el.offsetTop;
@@ -43,19 +43,19 @@ const onVisibilityChange = (el, callback) => {
             if(elementInViewport2(ele)){
                 var visible = index;
                 if (visible != old_visible && old_visible!==undefined ) {
-                    if (typeof callback == 'function') {
+                    if (typeof callback == "function") {
                         callback(visible,old_visible);
                         old_visible = visible;
                     }
                 }else{
                     if(old_visible===undefined){
-                        const options = document.querySelectorAll('.options');
-                        const mobOptions = document.querySelectorAll('.mob-options');
+                        const options = document.querySelectorAll(".options");
+                        const mobOptions = document.querySelectorAll(".mob-options");
                         if(options){
-                            options[visible].classList.add('active_section');
+                            options[visible].classList.add("active_section");
                         }
                         if(mobOptions){
-                            mobOptions[visible].classList.add('active_section');
+                            mobOptions[visible].classList.add("active_section");
                         }
                         old_visible = visible;
                     }
@@ -64,31 +64,31 @@ const onVisibilityChange = (el, callback) => {
         });
     }
 }
-const isActive = document.querySelectorAll('.is_active');
+const isActive = document.querySelectorAll(".is_active");
 
 const handler = onVisibilityChange (isActive, function(visible,old_visible) {
     old_visible = old_visible || 0;
-    const options = document.querySelectorAll('.options');
-    const mobOptions = document.querySelectorAll('.mob-options');
+    const options = document.querySelectorAll(".options");
+    const mobOptions = document.querySelectorAll(".mob-options");
     if(options){
-        options[visible].classList.add('active_section');
-        options[old_visible].classList.remove('active_section');
+        options[visible].classList.add("active_section");
+        options[old_visible].classList.remove("active_section");
     }
     if(mobOptions){
-        mobOptions[visible].classList.add('active_section');
-        mobOptions[old_visible].classList.remove('active_section');
+        mobOptions[visible].classList.add("active_section");
+        mobOptions[old_visible].classList.remove("active_section");
     }
 });
 if (window.addEventListener) {
-    addEventListener('DOMContentLoaded', handler, false);
-    addEventListener('load', handler, false);
-    addEventListener('scroll', handler, false);
-    addEventListener('resize', handler, false);
+    addEventListener("DOMContentLoaded", handler, false);
+    addEventListener("load", handler, false);
+    addEventListener("scroll", handler, false);
+    addEventListener("resize", handler, false);
     handler();
 } else if (window.attachEvent)  {
-    attachEvent('onDOMContentLoaded', handler);
-    attachEvent('onload', handler);
-    attachEvent('onscroll', handler);
-    attachEvent('onresize', handler);
+    attachEvent("onDOMContentLoaded", handler);
+    attachEvent("onload", handler);
+    attachEvent("onscroll", handler);
+    attachEvent("onresize", handler);
     handler();
 }
