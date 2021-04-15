@@ -248,7 +248,7 @@ a:focus{
 .justify-around{
     justify-content: space-around;
 }
-.justify-spa-btw{
+.justify-between{
     justify-content: space-between;
 }
 .justify-evenly{
