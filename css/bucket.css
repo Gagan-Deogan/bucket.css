@@ -1,118 +1,113 @@
 @import url("./components.css");
 @import url("./helper.css");
 
-*{
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
 }
 
-body{
+body {
+  --primary-dark: #1e40af;
+  --primary-default: #1f7ae0;
+  --primary-light: #3b82f6;
 
-    --primary-dark: #1E40AF;
-    --primary-default: #1f7ae0;
-    --primary-light:#3B82F6;
+  --grey-dark: #374151;
+  --grey-default: #6b7280;
+  --grey-light: #d1d5db;
+  --grey-opac: #eeeeeea1;
 
-    --grey-dark:#374151;
-    --grey-default:#6B7280;
-    --grey-light:#D1D5DB;
-    --grey-opac:#eeeeeea1;
+  --red-dark: #b91c1c;
+  --red-default: #dc2626;
+  --red-light: #ef4444;
 
+  --yellow-dark: #e4b601;
+  --yellow-default: #facc15;
+  --yellow-light: #fde047;
 
-    --red-dark:#B91C1C;
-    --red-default:#DC2626;
-    --red-light:#EF4444;
+  --black: #111827;
+  --inner-text: #f7fafc;
+  --background: #f7fafc;
+  --inner-background: transparent;
+  --foreground: #0e182a;
 
-    --yellow-dark:#e4b601;
-    --yellow-default:#FACC15;
-    --yellow-light:#FDE047;
-    
-    --black:#111827;
-    --inner-text:#f7fafc;
-    --background:#f7fafc;
-    --inner-background: transparent ;
-    --foreground:#0e182a;
+  background-color: var(--background);
+  color: var(--foreground);
 
-    background-color: var(--background);
-    color: var(--foreground);
-    
-    font-family: "Lato", sans-serif;
-    font-size:16px;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
 }
-body.dark-theme{
-    --primary-dark: #1E40AF;
-    --primary-default: #1f7ae0;
-    --primary-light:#3B82F6;
+body.dark-theme {
+  --primary-dark: #1e40af;
+  --primary-default: #1f7ae0;
+  --primary-light: #3b82f6;
 
-    --grey-dark:#111827;
-    --grey-default:#f7fafce1;
-    --grey-light:#a5a9af85;
-    --grey-opac:#a5a9afb4;
-    
-    --red-dark:#991B1B;
-    --red-default:#B91C1C;
-    --red-light:#DC2626;
+  --grey-dark: #111827;
+  --grey-default: #f7fafce1;
+  --grey-light: #a5a9af85;
+  --grey-opac: #a5a9afb4;
 
-    --yellow-dark:#92400E;
-    --yellow-default:#B45309;
-    --yellow-light:#D97706; 
-    
-    --black:#0e182a;
-    --inner-text:#f7fafc;
-    --background:#0e182a;
-    --inner-background:#142138;
-    --foreground:#f7fafc;
-    
+  --red-dark: #991b1b;
+  --red-default: #b91c1c;
+  --red-light: #dc2626;
+
+  --yellow-dark: #92400e;
+  --yellow-default: #b45309;
+  --yellow-light: #d97706;
+
+  --black: #0e182a;
+  --inner-text: #f7fafc;
+  --background: #0e182a;
+  --inner-background: #142138;
+  --foreground: #f7fafc;
 }
 
 @media (prefers-color-scheme: dark) {
-    body {
-        --primary-dark: #1E40AF;
-        --primary-default: #1f7ae0;
-        --primary-light:#3B82F6;
+  body {
+    --primary-dark: #1e40af;
+    --primary-default: #1f7ae0;
+    --primary-light: #3b82f6;
 
-        --grey-dark:#111827;
-        --grey-default:#f7fafce1;
-        --grey-light:#a5a9af85;
-        --grey-opac:#37415150;
-        
-        --red-dark:#991B1B;
-        --red-default:#B91C1C;
-        --red-light:#DC2626;
+    --grey-dark: #111827;
+    --grey-default: #f7fafce1;
+    --grey-light: #a5a9af85;
+    --grey-opac: #37415150;
 
-        --yellow-dark:#92400E;
-        --yellow-default:#B45309;
-        --yellow-light:#D97706;
-        
-        --black:#0e182a;
-        --inner-text:#f7fafc;
-        --background:#0e182a;
-        --foreground:#f7fafc;
-        
-    }
+    --red-dark: #991b1b;
+    --red-default: #b91c1c;
+    --red-light: #dc2626;
 
-    body.light-theme {
-        --primary-dark: #1E40AF;
-        --primary-default: #1f7ae0;
-        --primary-light:#3B82F6;
+    --yellow-dark: #92400e;
+    --yellow-default: #b45309;
+    --yellow-light: #d97706;
 
-        --grey-dark:#374151;
-        --grey-default:#6B7280;
-        --grey-light:#D1D5DB;
-        --grey-opac:#d1d5db7e;
+    --black: #0e182a;
+    --inner-text: #f7fafc;
+    --background: #0e182a;
+    --foreground: #f7fafc;
+  }
 
+  body.light-theme {
+    --primary-dark: #1e40af;
+    --primary-default: #1f7ae0;
+    --primary-light: #3b82f6;
 
-        --red-dark:#B91C1C;
-        --red-default:#DC2626;
-        --red-light:#EF4444;
+    --grey-dark: #374151;
+    --grey-default: #6b7280;
+    --grey-light: #d1d5db;
+    --grey-opac: #d1d5db7e;
 
-        --yellow-dark:#e4b601;
-        --yellow-default:#FACC15;
-        --yellow-light:#FDE047;
-        
-        --black:#111827;
-        --inner-text:#f7fafc;
-        --background:#f7fafc;
-        --foreground:#0e182a;
-    }
+    --red-dark: #b91c1c;
+    --red-default: #dc2626;
+    --red-light: #ef4444;
+
+    --yellow-dark: #e4b601;
+    --yellow-default: #facc15;
+    --yellow-light: #fde047;
+
+    --black: #111827;
+    --inner-text: #f7fafc;
+    --background: #f7fafc;
+    --foreground: #0e182a;
+  }
 }
