@@ -181,7 +181,7 @@ button:active {
 .card > img {
   -o-object-fit: cover;
   object-fit: cover;
-  height: auto;
+  height: 15rem;
 }
 .card > .card-badge {
   position: absolute;
